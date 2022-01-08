@@ -1,16 +1,15 @@
 #include <stdio.h>
 #include <iostream>
-#include <string>
+#include <cmath>
 using namespace std;
 
 int main() {
-	int case_number;
-	cin >> case_number;
+	int test;
+	cin >> test;
+	int* arr_sum = new int[test];
+	int* arr_min = new int[test];
 
-	int* even_sum = new int[case_number];
-	int* even_min = new int[case_number];
-
-	for (int i = 0; i < case_number; i++) {
+	for (int i = 0; i < test; i++) {
 		int sum = 0, min = 100;
 		for (int j = 0; j < 7; j++) {
 			int input;
@@ -21,12 +20,11 @@ int main() {
 					min = input;
 			}
 		}
-		even_sum[i] = sum;
-		even_min[i] = min;
+		arr_sum[i] = sum;
+		arr_min[i] = min;
 	}
 
-	for (int i = 0; i < case_number; i++) {
-		cout << even_sum[i] << " " << even_min[i] << "\n";
+	for (int i = 0; i < test; i++) {
+		cout << arr_sum[i] << " " << arr_min[i] << "\n";
 	}
-
 }

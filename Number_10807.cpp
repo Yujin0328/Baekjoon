@@ -1,24 +1,27 @@
 #include <stdio.h>
 #include <iostream>
+#include <cmath>
 using namespace std;
 
-int main() {
-	int number, count = 0;
-	cin >> number;
 
-	int* arr = new int[number];
-	for (int i = 0; i < number; i++) {
+int main() {
+	int count, find, check = 0;
+	cin >> count;
+
+	int* arr = new int[count];
+
+	for (int i = 0; i < count; i++) {
 		int input;
 		cin >> input;
 		arr[i] = input;
 	}
-
-	int find;
 	cin >> find;
 
-	for (int i = 0; i < number; i++) {
-		if (find == arr[i])
-			count++;
+	for (int i = 0; i < count; i++) {
+		if (arr[i] == find) {
+			check++;
+		}
 	}
-	cout << count;
+
+	cout << check;
 }
