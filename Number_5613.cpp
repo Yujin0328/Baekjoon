@@ -12,10 +12,11 @@ int main() {
 	while (true) {
 		char sign;
 		long long num;
-		cin >> sign >> num;
+		cin >> sign;
 		if (sign == '=')
 			break;
 		else {
+			cin >> num;
 			switch (sign) {
 			case '+': result += num; break;
 			case '-': result -= num; break;
